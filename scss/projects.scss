@@ -1,0 +1,30 @@
+
+.spacing {
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+
+
+h1 {
+    width: 100px;
+    margin-top: 16px;
+    text-align: center;
+}
+.imgCJ {
+    height: 500px;
+    width: 70%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/pexels-luciana-gebara-1686303-3217608.jpg);
+}
+
+}
+
+p{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

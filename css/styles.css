@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px;
+}
+
+nav {
+  height: 50px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1 {
+  margin-top: 16px;
+  text-align: center;
+}
+
+p {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.imgCA {
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/pexels-jan-kroon-357445-1038935.jpg);
+}
+
+.spacing {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.spacing h1 {
+  width: 100px;
+  margin-top: 16px;
+  text-align: center;
+}
+.spacing .imgCJ {
+  height: 500px;
+  width: 70%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/pexels-luciana-gebara-1686303-3217608.jpg);
+}
+
+p {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+h1 {
+  margin-top: 16px;
+  text-align: center;
+}
+
+p {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.imgCP {
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/pexels-mikebirdy-114820.jpg);
+}
+
+h1 {
+  margin-top: 16px;
+  text-align: center;
+}
+
+p {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.imgC {
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/pexels-pixabay-276374.jpg);
+}
+
+h1 {
+  margin-top: 16px;
+  text-align: center;
+}
+
+p {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.imgCC {
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/pexels-pixabay-355747.jpg);
+}
