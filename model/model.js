@@ -10,7 +10,7 @@ export function route() {
   let pageID = hashTag.replace("#", "");
   let contentName = pageID + "Content";
 
-  if (pageID == "") {
+  if (pageID == " ") {
       $.get("pages/home.html", (data) => {
           $("#app").html(data); 
       });
