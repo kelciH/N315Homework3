@@ -1,78 +1,23 @@
-const HomePage = `
-<div class="imgC">
-      </div>
-      <h1>Welcome to Our Website!</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
-        fugit praesentium nihil hic assumenda temporibus repellat quas, quam,
-        magnam nulla dolor ab voluptatibus voluptate saepe est rem atque vero
-        doloremque sapiente incidunt quisquam corporis eius! Laboriosam odio
-        exercitationem recusandae velit ipsa illo perferendis voluptatibus. Quam
-        sunt possimus harum. Perferendis adipisci quod aspernatur accusamus
-        minima! Numquam consequuntur quae nulla placeat saepe eveniet iste,
-        nihil fugit vero unde incidunt eligendi repellendus beatae aperiam culpa
-        sequi eaque. Eius ut quaerat reprehenderit sunt eum, voluptas culpa ad
-        omnis placeat soluta? Sunt, quos nam in harum enim iusto labore. Sunt
-        dicta quo explicabo ab dignissimos?
-      </p>
-      `;
-const AboutPage = `<h1>Who Are We?</h1>
-      <div class="imgCA">
-      </div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
-        fugit praesentium nihil hic assumenda temporibus repellat quas, quam,
-        magnam nulla dolor ab voluptatibus voluptate saepe est rem atque vero
-        doloremque sapiente incidunt quisquam corporis eius! Laboriosam odio
-        exercitationem recusandae velit ipsa illo perferendis voluptatibus. Quam
-        sunt possimus harum. Perferendis adipisci quod aspernatur accusamus
-        minima! Numquam consequuntur quae nulla placeat saepe eveniet iste,
-        nihil fugit vero unde incidunt eligendi repellendus beatae aperiam culpa
-        sequi eaque. Eius ut quaerat reprehenderit sunt eum, voluptas culpa ad
-        omnis placeat soluta? Sunt, quos nam in harum enim iusto labore. Sunt
-        dicta quo explicabo ab dignissimos?
-      </p>`;
-const ContactPage = `<h1>Contact Us!</h1>
-      <div class="imgCC">
-      </div>`;
-const ProductsPage = `<h1>What Do We Make?</h1>
-      <div class="imgCP">
-    
-      </div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
-        fugit praesentium nihil hic assumenda temporibus repellat quas, quam,
-        magnam nulla dolor ab voluptatibus voluptate saepe est rem atque vero
-        doloremque sapiente incidunt quisquam corporis eius! Laboriosam odio
-        exercitationem recusandae velit ipsa illo perferendis voluptatibus. Quam
-        sunt possimus harum. Perferendis adipisci quod aspernatur accusamus
-        minima! Numquam consequuntur quae nulla placeat saepe eveniet iste,
-        nihil fugit vero unde incidunt eligendi repellendus beatae aperiam culpa
-        sequi eaque. Eius ut quaerat reprehenderit sunt eum, voluptas culpa ad
-        omnis placeat soluta? Sunt, quos nam in harum enim iusto labore. Sunt
-        dicta quo explicabo ab dignissimos?
-      </p>`;
-const ProjectsPage = `<div class="spacing">
-        <h1>What Are We Working On?</h1>
-        <div class="imgCJ"></div>
-      </div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
-        fugit praesentium nihil hic assumenda temporibus repellat quas, quam,
-        magnam nulla dolor ab voluptatibus voluptate saepe est rem atque vero
-        doloremque sapiente incidunt quisquam corporis eius! Laboriosam odio
-        exercitationem recusandae velit ipsa illo perferendis voluptatibus. Quam
-        sunt possimus harum. Perferendis adipisci quod aspernatur accusamus
-        minima! Numquam consequuntur quae nulla placeat saepe eveniet iste,
-        nihil fugit vero unde incidunt eligendi repellendus beatae aperiam culpa
-        sequi eaque. Eius ut quaerat reprehenderit sunt eum, voluptas culpa ad
-        omnis placeat soluta? Sunt, quos nam in harum enim iusto labore. Sunt
-        dicta quo explicabo ab dignissimos?
-      </p>`;
-      
 
-export function changePage(pageName){
-    let navID = pageName + "Page";
+// export function changePage(pageName){
+//     let navID = pageName + "Page";
     
-    $("#app").html(eval(navID));
-}   
+//     $("#app").html(eval(navID));
+// }   
+
+export function route() {
+  let hashTag = window.location.hash;
+  let pageID = hashTag.replace("#", "");
+  let contentName = pageID + "Content";
+
+  if (pageID == "") {
+      $.get("pages/home.html", (data) => {
+          $("#app").html(data); 
+      });
+  } else {
+      $.get("pages/" + pageID + ".html", (data) => {
+          $("#app").html(data); 
+      });
+  }
+
+}
